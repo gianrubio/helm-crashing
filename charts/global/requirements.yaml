@@ -1,0 +1,32 @@
+dependencies:
+
+  - name: heapster
+    version: 0.2.6
+    repository: https://kubernetes-charts.storage.googleapis.com
+
+  # - name: cert-manager
+  #   version: 0.2.2
+  #   repository: https://kubernetes-charts.storage.googleapis.com
+
+  # # https://github.com/coreos/prometheus-operator/tree/master/helm/kube-prometheus
+  # - name: kube-prometheus
+  #   version: 0.0.19
+  #   repository: https://s3-eu-west-1.amazonaws.com/coreos-charts/stable/
+    
+  # # https://github.com/kubernetes/charts/tree/master/stable/kube2iam
+  # - name: kube2iam
+  #   version: 0.8.0
+  #   repository: https://kubernetes-charts.storage.googleapis.com
+
+  # # https://github.com/kubernetes/charts/tree/master/stable/nginx-ingress
+  # - name: nginx-ingress
+  #   alias: nginx-ingress-intern
+  #   version: 0.9.3
+  #   repository: https://kubernetes-charts.storage.googleapis.com
+
+  # # https://github.com/kubernetes/charts/tree/master/incubator/oauth-proxy
+  # # TODO review image
+  # - name: oauth-proxy
+  #   version: 0.1.5
+  #   repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+

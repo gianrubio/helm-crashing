@@ -1,0 +1,83 @@
+# # TODO enable https://github.com/heptio/sonobuoy
+
+# #  https://github.com/kubernetes/charts/tree/master/stable/heapster
+# heapster:
+#   rbac:
+#     create: false
+  
+
+# kube-prometheus:
+#   alertmanager:
+#     ingress:
+#       fqdn: alertmanager.example.com #CHANGE-ME
+#       enabled: true
+#       annotations:
+#         kubernetes.io/ingress.class: intern
+#         kubernetes.io/tls-acme: "true"
+#         certmanager.k8s.io/acme-challenge-type: dns01
+#       tls: 
+#         - secretName: alertmanager.example.com
+#           hosts:
+#             - alertmanager.example.com
+#   grafana:
+#     ingress:
+#       fqdn: grafana.example.com
+#       enabled: true
+#       annotations:
+#         kubernetes.io/ingress.class: intern
+#         kubernetes.io/tls-acme: "true"
+#         certmanager.k8s.io/acme-challenge-type: dns01
+#       tls: 
+#         - secretName: grafana.example.com
+#           hosts:
+#             - $environment.ddy.systems => prod.ddy.systems
+#   prometheus:
+#     ingress:
+#       fqdn: prometheus.example.com
+#       enabled: true
+#       annotations: 
+#         kubernetes.io/ingress.class: intern
+#         kubernetes.io/tls-acme: "true"
+#         certmanager.k8s.io/acme-challenge-type: dns01
+#       tls: 
+#         - secretName: prometheus.example.com
+#           hosts:
+#             - prometheus.example.com
+
+# kube2iam:
+#   rbac.create: true
+#   extraArgs.base-role-arn: "arn:aws:iam::849822788739:role/"  #CHANGE-ME
+#   host.interface: cali+  #CHANGE-ME
+
+# nginx-ingress-intern:
+#   rbac:
+#     create: true
+#   controller.config:
+#     body-size: 64m
+#     enable-vts-status: "true"
+#     hosts-include-subdomains: "false"
+#     log-format-upstream: '{ "time": "$time_iso8601", "remote_addr": "$proxy_protocol_addr",
+#       "x-forward-for": "$proxy_add_x_forwarded_for", "request_id": "$request_id", "remote_user":
+#       "$remote_user", "bytes_sent": $bytes_sent, "request_time": $request_time, "status":
+#       $status, "vhost": "$host", "request_proto": "$server_protocol", "path": "$uri",
+#       "request_query": "$args", "request_length": $request_length, "duration": $request_time,
+#       "method": "$request_method", "http_referrer": "$http_referer", "http_user_agent":
+#       "$http_user_agent" }'
+#     proxy-connect-timeout: "16"
+#     proxy-cookie-path: '"/" "/"'
+#     proxy-read-timeout: "600"
+#     proxy-real-ip-cidr: 10.50.0.0/16
+#     proxy-send-timeout: "600"
+#     server-tokens: "false"
+#     ssl-protocols: TLSv1.2
+#     ssl-session-tickets: "false"
+#     use-proxy-protocol: "true"
+#   controller.headers:
+#     X-Request-Id: $request_id
+#     X-SSL-Client-Cert-Pem: $ssl_client_raw_cert	
+#   resources:
+#     limits:
+#       memory: 1Gi
+#     requests:
+#       cpu: 200m
+#       memory: 700Mi

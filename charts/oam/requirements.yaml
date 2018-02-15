@@ -1,0 +1,4 @@
+dependencies:
+  - name: global
+    version: 0.1.0
+    repository: file://../global

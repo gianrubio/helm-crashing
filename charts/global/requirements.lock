@@ -1,0 +1,6 @@
+dependencies:
+- name: heapster
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 0.2.6
+digest: sha256:ae22af2fc6dd5ac42ff216c720ad209676bc28ea9125e93b448f37ccd3c6d1ed
+generated: 2018-02-15T16:04:04.199328+01:00
